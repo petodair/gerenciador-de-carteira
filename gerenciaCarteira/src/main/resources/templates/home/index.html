@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=width-device, initial-scale=1.0">
+	<meta name="author" content="Peterson Odair">
+	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Gerenciador de Dados</title>
+</head>
+
+<body>
+
+	<div class="background" style="background-image:url('img/fundo.jpg');">
+
+		<section class="header-section">
+			<div th:replace="~{fragmentos/fragmento :: cabecalho}"></div>
+		</section>
+
+		<div class="sombra"></div>
+
+		<section class="neo-section">
+			<div class="neo-container">
+				<h1 class="texto-home">Sistema Gerenciador de <br>Carteira Pessoal</h1>
+				<br>
+				<p class="texto-home">Gerencie seus gastos e ganhos, calcule quanto irá gastar, quanto você terá
+					terá no fim do<br> mês, tudo isso com esse sistema que fara tudo automaticamente para você.
+				</p>
+
+				<div class="botoes">
+					
+					<div class="wm">
+						<a th:href="@{/login}">
+							<h5 class="btn">FAZER LOGIN</h5>
+						</a>
+					</div>
+
+					<div class="wm">
+						<a th:href="@{/}">
+							<h5 class="btn justify-content-center">CADASTRAR CONTA</h5>
+						</a>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="footer-section">
+
+			<div th:replace="~{fragmentos/fragmento :: rodape}"></div>
+
+		</section>
+
+	</div>
+
+	<!-- JQuery e Bootstrap -->
+	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
