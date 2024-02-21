@@ -14,6 +14,14 @@ a.btn-nav:hover{color: #E08600;}
 	position: relative;
 }
 
+.login-background{min-height: 700px;
+	background-size: cover !important;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding: 30px;
+	position: relative;}
+
 .wm{width: 50%; float: left;}
 .clear{clear: both;}
 .center{text-align: center;}
