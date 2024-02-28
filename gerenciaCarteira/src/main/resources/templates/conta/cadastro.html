@@ -7,7 +7,7 @@
 	<meta name="author" content="Peterson Odair">
 	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/conta.css">
-	<title>Login</title>
+	<title>Cadastro</title>
 </head>
 
 <body>
@@ -19,30 +19,30 @@
 			<div class="main-div">
 				
 				<div class="texto-header">
-					<h4 style="color: #E08600;">Login</h4>
+					<h4 style="color: #E08600;">CADASTRO</h4>
 				</div>
 
-				<form method="post">	
+				<form method="post" th:object="${conta}" action="salvarConta">	
 
 					<div class="form-group">
-						<input class="form-control" placeholder="nome de usuario">
+						<input type="email" class="form-control" th:field="*{usuario}" placeholder="insira um nome de usuario">
 					</div>
-
-					<br>
-
+					
+					<div class="form-group">
+						<input type="text" class="form-control" th:field="*{email}" placeholder="informe um endereço de e-mail">
+					</div>
 
 					<div class="form-group">
-						<input class="form-control" placeholder="insira sua senha">
+						<input type="password" th:field="*{senha}" class="form-control" placeholder="insira uma senha">
+					</div>
+					
+					<div class="form-group">
+						<input class="form-control" placeholder="confirme a senha">
 					</div>
 
-
-					<br>
-
-					<div class="cadastro">
-						<a th:href="@{/cadastro}">Não possui cadastro? Clique aqui</a>
+					<div class="login"  style="margin-bottom: 10px;">
+						<a th:href="@{/login}">Já possui uma conta? Clique aqui</a>
 					</div>
-
-					<br>
 
 					<button type="submit" class="btn btn-success">ENTRAR</button>
 					<a class="btn btn-outline-danger" th:href="@{/}">VOLTAR</a>
