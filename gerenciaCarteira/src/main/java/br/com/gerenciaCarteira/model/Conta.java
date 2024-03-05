@@ -1,11 +1,13 @@
-package br.com.gerencuaCarteira.model;
+package br.com.gerenciaCarteira.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -20,8 +22,16 @@ public class Conta {
 	private String usuario;
 	
 	@Email
+	@NotBlank(message = "O campo e-mail deve ser preenchido")
 	private String email;
+	
+	@NotBlank(message = "O campo senha deve ser preenchido")
 	private String senha;
+	
+	@Transient
+	@NotBlank(message = "A confirmação senha deve ser preenchida")
+	private String repetirSenha;
+	
 	public Long getId() {
 		return id;
 	}
@@ -45,6 +55,12 @@ public class Conta {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	public String getRepetirSenha() {
+		return repetirSenha;
+	}
+	public void setRepetirSenha(String repetirSenha) {
+		this.repetirSenha = repetirSenha;
 	}
 	
 	

@@ -42,11 +42,12 @@ a.btn-nav:hover{color: #E08600;}
 
 .texto-centro{color: #fff; font-size: 3em; font-family: 'Ubuntu'; font-weight: bold;}
 .texto-home{color: #fff;}
-.btn{width: 280px; color: #fff; border-radius: 10px; border: 3px solid #E08600;; padding: 15px; font-weight: bold;}
+.btn{width: 280px; color: #fff; border-radius: 10px; border: 3px solid #E08600; padding: 15px; font-weight: bold;}
 .botoes{padding: 2% 15%; display: inline;}
 .btn:hover{color:  rgb(255, 190, 125); background-color: rgba(0,0,0,0.5);}
 .rodape{color: #fff; text-align: center; font-size: 1.25em;}
 .rodape-bg{color: #fff; background-color: #F5DE7A; text-align: center; font-size: 1.25em; padding: 15px;}
+.carteira{border: 3px solid #E08600; border-radius: 8px; max-width: 1280px; padding: 2% 2%; margin:0 auto;}
 
 /* Responsividade */
 @media screen and (max-width: 667px){
