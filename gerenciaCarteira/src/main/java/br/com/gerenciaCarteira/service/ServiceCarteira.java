@@ -18,13 +18,25 @@ public class ServiceCarteira {
 		
 	}
 	
-	public Carteira carregarCarteira(Long idConta) {
+public void salvarCarteira(Carteira carteira) {
 		
-		System.out.println(idConta);
+		carteiraRepository.save(carteira);
+		
+	}
+	
+	public Carteira carregarCarteira(Long idConta) {
 		
 		Carteira carteira = carteiraRepository.findByIdConta(idConta);
 		
 		return carteira;
+	}
+	
+	public Carteira alterarCarteira(Long id) {
+		
+		Carteira carteira = carteiraRepository.getReferenceById(id);
+		
+		return carteira;
+		
 	}
 
 }

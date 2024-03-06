@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=width-device, initial-scale=1.0">
 	<meta name="author" content="Peterson Odair">
 	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/btn.css">
 	<title>Carteira</title>
 </head>
 <body>
@@ -18,19 +18,43 @@
 			
 			<div class="carteira">
 				
+				<h1 style="text-align: center" th:text="${carteira.nome}"></h1>
+				
 				<row>
 					
-					<label style="margin-right: 40px;"> Nome da carteira: <span th:text="${session.carteiraConta.nome}"></span></label>
+					<label style="margin-right: 40px;">Gastos das atividades: <span th:text="${gastos}"></span></label>
 					
-					<label> outra</label>
+					<label>Ganhos das atividades: <span th:text="${ganhos}"></span></label>
 					
 				</row>
 				
+				<p>Gasto das atividades: <span th:text="${gastosTotais}"></span></p>
+				
+				<row>
+					
+					<label style="margin-right: 40px;"> Valor especulado: <span th:text="${valorEspeculado}"></span></label>
+					
+					<label> Valor pretendido: <span th:text="${carteira.valorPretendido}"></span></label>
+					
+				</row>
+				
+				<h3>Valor Atual:</h3>
+				<h4 th:text="${carteira.valorAtual}"></h4>
+				
 			</div>
+			
+			<a class="btn btn-success" th:href="@{/carteira/editar-carteira/{id}(id=${carteira.id})}">Editar</a>
+			
+			<a class="btn btn-success" th:href="@{/carteira/lista-atividades/{id}(id=${session.contaLogada.id})}">Atividades</a>
+			
+			<a class="btn btn-success" th:href="@{/carteira/adicionar-atividade}">Adicionar Atividade</a>
 		
 	</div>
 	
 	<div th:replace="~{fragmentos/fragmento-bg :: rodape}"></div>
+	
+	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 	
 
 </body>

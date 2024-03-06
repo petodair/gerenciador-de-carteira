@@ -25,7 +25,8 @@
 
 				<a class="btn-nav nav-item nav-link" th:href="@{/}">Início</a>		
 				<a th:href="@{/carteira/adicionar-atividade}" class="btn-nav nav-item nav-link">Atividades</a>
-				<a th:href="@{/carteira/carteira}" class="btn-nav nav-item nav-link">Carteira</a>
+				<a th:href="@{/carteira/carteira/{id}(id=${session.contaLogada.id})}" th:if="${session.contaLogada}"
+				class="btn-nav nav-item nav-link">Carteira</a>
 				<form action="/logout" method="post">
 				<button type="submit" class="btn-nav nav-item nav-link btn-danger">Sair</button> 
 				</form>
