@@ -50,10 +50,11 @@ a.btn-nav:hover{color: #E08600;}
 .carteira{border: 3px solid #E08600; border-radius: 8px; max-width: 1280px; padding: 2% 2%; margin:0 auto;}
 
 /* Responsividade */
-@media screen and (max-width: 667px){
+@media screen and (max-width: 800px){
 	
 	.wm{width: 100%;}
 	nav{height: 100%;}
-	.neo-container{margin-top: 120px;}
+	.neo-container{margin-top: 120px; margin-left: 0;}
+	
 	
 } 

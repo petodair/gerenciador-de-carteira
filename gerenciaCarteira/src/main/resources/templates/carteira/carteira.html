@@ -22,15 +22,18 @@
 				
 				<row>
 					
-					<label style="margin-right: 40px;">Gastos das atividades: <span th:text="${gastos}"></span></label>
+					<label style="margin-right: 40px; color: rgb(255, 128, 128);">Gastos das atividades: <span th:text="${gastos}"></span></label>
 					
-					<label>Ganhos das atividades: <span th:text="${ganhos}"></span></label>
+					<label style="color: green">Ganhos das atividades: <span th:text="${ganhos}"></span></label>
 					
 				</row>
 				
 				<p>Gasto das atividades: <span th:text="${gastosTotais}"></span></p>
 				
+				<hr>
+				
 				<row>
+					
 					
 					<label style="margin-right: 40px;"> Valor especulado: <span th:text="${valorEspeculado}"></span></label>
 					
@@ -38,8 +41,8 @@
 					
 				</row>
 				
-				<h3>Valor Atual:</h3>
-				<h4 th:text="${carteira.valorAtual}"></h4>
+				<h3 style="color: #E08600;">Valor Atual:</h3>
+				<h4 style="color: #E08600;" th:text="${carteira.valorAtual}"></h4>
 				
 			</div>
 			

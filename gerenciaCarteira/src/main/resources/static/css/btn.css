@@ -38,10 +38,12 @@ a.btn-nav:hover{color: #E08600;}
 
 
 /* Responsividade */
-@media screen and (max-width: 667px){
+@media screen and (max-width: 800px){
 	
 	.wm{width: 100%;}
 	nav{height: 100%;}
 	.neo-container{margin-top: 120px;}
+	.form-group{width: 100%;}
+	label{margin-right: 0%; right: 80%;}
 	
 } 
